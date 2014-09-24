@@ -1,0 +1,19 @@
+/* Styles Specific for Admin Pages */
+/* ==========================================================================
+   Table CSS
+   ========================================================================== */
+
+/*table { width:100%; table-layout: fixed; }
+th,td, h3{
+  word-wrap:break-word;
+  overflow: hidden;
+}
+table.table td img{
+    width: 100%;
+    height: auto;
+}*/
+
+.p-logo{
+  padding: 0px 15px 15px;
+}
+
