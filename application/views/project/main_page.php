@@ -1,54 +1,34 @@
 <div class="container">
-  <?php 
-    if(!isset($user)){ ?>
-      <div class="welcome-note welcome-init" id="phrase">
-            <h2>Welcome to DBMS</h2>
-      </div>
+ 
 
-      <form action="<?php echo base_url(); ?>" method="post"  enctype="multipart/form-data" class="form-horizontal" role="form" novalidate>
-        <div class="login login-init col-md-6 col-sm-6" id = "login">
-          <input type="text" placeholder="username" name="txt_username"><br>
-          <input type="password" placeholder="password" name="txt_password"><br>
-          <input type="submit" value="Login">
-        </div>
-      </form>
-    <?php
-    }else{
-      echo '<div class="welcome-note welcome-init" id="phrase">
-            <h2>Welcome, '.$user->CategoryID.'</h2>
-            </div>
-            <button class="btn btn-default btn-md welcome-button" href="#" id="proceed_button">Proceed</button>
-            ';
-    }
-    ?>
+      <div class="intro-project" id="phrase">
+            <h2>you currently have no projects.</h2>
+            <h2 id = "please-project">please    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   &nbsp to get started</h2>
+            <a href = "<?=base_url()?>bms/create_project"><h2 id = "click-project" class ="click-project">click here</h2></a>
+      </div>
 
 </div>
 
  <script src="<?= base_url() . 'application/public/js/jquery-2.1.1.min.js'?>"></script>
-    <script src="<?= base_url() . 'application/public/js/jquery.lettering.js'?>"></script>
     <script>
         $(document).ready(function() {
-          $( "#login" ).hide( "slow", function() {
-          });
-          $("#phrase").hide( "slow", function() {
-
-          });
-
-          $("#proceed_button").hide( "slow", function() {
-
-          });
-        
-          $("#phrase").after(function() { 
-            $( "#login" ).removeClass("login-init").show( "slow", function() {
-
-            });
-            $("#phrase").removeClass("welcome-init").show( "slow", function() {
-
-            });
-            $("#proceed_button").show( "slow", function() {
-
-            });
-
-        });
+           $('#click-project').addClass("visibility-hidden").hide("slow",function() {});
+            $('#please-project').addClass("visibility-hidden").hide("slow",function() {});
+           $('#phrase').addClass("visibility-hidden").hide("slow",function() {}).delay(100)
+                      .queue(function() {
+                        $(this).removeClass("visibility-hidden");
+                        $(this).fadeIn(300,function() {});
+                        $('#click-project').delay(300).queue(function(){
+                                                  $(this).removeClass("visibility-hidden");
+                                                  $(this).fadeIn(300,function() {});
+                                                  $(this).dequeue();
+                                                });
+                        $('#please-project').delay(300).queue(function(){
+                                                  $(this).removeClass("visibility-hidden");
+                                                  $(this).fadeIn(300,function() {});
+                                                  $(this).dequeue();
+                                                });
+                        $(this).dequeue();
+                      });
       });
     </script>

@@ -1,0 +1,15 @@
+.intro-project{
+	position: absolute;
+	top: calc(50% - 75px);
+	left: calc(50% - 300px);
+	margin: 10px -15px;
+	height: 150px;
+	width: auto;
+	color: white;
+	padding: 10px;
+	z-index: 2;
+}
+
+.click-project{
+	margin: -44px 100px;
+}

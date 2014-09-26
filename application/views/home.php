@@ -1,7 +1,7 @@
 
 <div class="container row">
   <?php 
-    if(!isset($user)){ ?>
+    if(!isset($s_user)){ ?>
       <div class="welcome-note col-md-6 col-sm-6 col-xs-6" id="phrase">
             <h2 class="welcome-text" id = "welcome-text"> Welcome</h2> 
             <h2 class="to-text"      id = "to-text">        to   </h2>
@@ -11,7 +11,14 @@
             
       </div>
       <div class="login col-md-6 col-sm-6 col-xs-6" id = "login">
-        <form action="<?php echo base_url(); ?>" method="post"  enctype="multipart/form-data" class="form-horizontal" role="form" novalidate>        
+        <div class= "error-message">
+          <?php
+            if(isset($s_error)){
+              echo $s_error;
+            }
+          ?>
+        </div>
+        <form action="<?php echo base_url(); ?>" method="post"  enctype="multipart/form-data" class="form-horizontal" role="form" id = 'myFormId' >        
           <input type="text" placeholder="username" name="txt_username"><br>
           <input type="password" placeholder="password" name="txt_password"><br>
           <input type="submit" value="Login">   
@@ -23,16 +30,15 @@
     <?php
     }else{
       echo '<div class="welcome-note welcome-init" id="phrase">
-            <h2>Welcome, '.$user->CategoryID.'</h2>
+            <h2>Welcome, '.$s_user.'</h2>
             </div>
-            <button class="btn btn-default btn-md welcome-button" href="#" id="proceed_button">Proceed</button>
+            <a class="btn btn-default btn-md welcome-button" href="'.base_url().'bms" id="proceed_button">Proceed</a>
             ';
     }
     ?>
 
 </div>
     <script src="<?= base_url() . 'application/public/js/jquery-2.1.1.min.js'?>"></script>
-    <script src="<?= base_url() . 'application/public/js/jquery.lettering.js'?>"></script>
     <script>
         $(document).ready(function() {
           $('#proceed_button').addClass("visibility-hidden").hide("slow",function() {});
@@ -115,8 +121,12 @@
                         });
                        
 
-        
-
+            var form = $("#myFormId");
+            var url = form.attr("action");
+            var formData = form.serialize();
+            $.post(url, formData, function (data) {
+                $("#msg").html(data);
+            });
       });
     </script>
 

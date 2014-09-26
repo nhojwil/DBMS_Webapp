@@ -1,6 +1,6 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
-class Standard_programs_model extends SAP_Model
+class Standard_programs_model extends BMS_Model
 {
 	function __construct()
 	{
