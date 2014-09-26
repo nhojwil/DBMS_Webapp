@@ -35,8 +35,8 @@ class Member_model extends BMS_Model
 	*/
 	function get_info($i_member_id)
 	{
-		$this->db->where('member.Mem_ID', $i_adhoc_id);
-		$r_query = $this->db->get(TBL_ADHOC_PROGRAMS);
+		$this->db->where('member.Mem_ID', $i_member_id);
+		$r_query = $this->db->get('member');
 
 		if ($r_query->num_rows() > 0) {
 			return $r_query->row();
@@ -45,34 +45,5 @@ class Member_model extends BMS_Model
 		}
 	}
 
-/**
-	* Returs a list of Adhoc Programs about the centre
-	* @scope 	public
-	* @param 	int 	centre id
-	* @return 	r_query Result Set	
-	*/
-	function get_list($i_centre_id)
-	{
-		$this->db->where('centre_id', $i_centre_id);
-		$r_query = $this->db->get(TBL_ADHOC_PROGRAMS);
 
-		if ($r_query->num_rows() > 0) {
-			return $r_query->result();
-		} else {
-			return NULL;
-		}
-	}
-
-	/**
-	* Returs number of rows through location id
-	* @scope 	public
-	* @param 	int 	location id
-	* @return 	int 	number of rows	
-	*/
-	function count_by_location_id($i_location_id) {
-		$this->db->where('location_id', $i_location_id);
-		$r_result = $this->db->get(TBL_ADHOC_PROGRAMS);
-
-		return $r_result->num_rows();
-	} //end of count_by_location_id
 }
