@@ -58,11 +58,11 @@
                                                                        $('#B-text').delay(200)
                                                                                     .queue(function() {
                                                                                               $(this).removeClass("visibility-hidden");
-                                                                                              $(this).fadeIn(400,function() {});
+                                                                                              $(this).show(400,function() {});
                                                                                               $('#M-text').delay(400)
                                                                                                            .queue(function() {
                                                                                                                     $(this).removeClass("visibility-hidden");
-                                                                                                                    $(this).show(500,function() {});
+                                                                                                                    $(this).fadeIn(500,function() {});
                                                                                                                     $('#S-text').delay(400)
                                                                                                                                 .queue(function() {
                                                                                                                                         $(this).removeClass("visibility-hidden");
