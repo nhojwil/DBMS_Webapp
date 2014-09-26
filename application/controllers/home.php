@@ -10,9 +10,8 @@ class Home extends SAP_Controller
 		$this->data['s_page_header'] = 'home';
 		$this->data['s_page_type'] = 'home';
 		$this->data['a_cs_scripts'] = array(
+			base_url() . 'application/public/css/main.css',
 			base_url() . 'application/public/css/home_style.css',
-			base_url() . 'application/public/css/default.css',
-			base_url() . 'application/public/css/component.css',
 			);
 
 		$this->data['a_js_scripts'] = array( 
@@ -37,6 +36,7 @@ class Home extends SAP_Controller
 			$this->data['user'] = "wwwww";
 			$user_account = $this->admin_model->login();
 			if($user_account!= FALSE){
+				$this->session->set_userdata = (array('CategoryID' => $user_account->CategoryID));
 				$this->data['user'] = $user_account; 
 			}
 		}

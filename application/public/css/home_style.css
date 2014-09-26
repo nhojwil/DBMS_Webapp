@@ -1,22 +1,4 @@
-body{
-  margin: auto;
-  padding: 0;
-  background: #fff;
-}
-.body{
-  position: absolute;
-  top: -20px;
-  left: -20px;
-  right: -40px;
-  bottom: -40px;
-  width: auto;
-  height: auto;
-  background-image:url('../img/main/main_background.jpg');
-  background-size: cover; 
-  background-color: #444;
-  -webkit-filter: blur(5px);
-  z-index: 0;
-}
+
 
 
 
@@ -44,7 +26,7 @@ body{
 .login{
   position: absolute;
   top: calc(50% - 75px);
-  left: calc(50% - 50px);
+  left: calc(50% - 0px);
   margin-left:-75px;
   height: 150px;
   width: 350px;
@@ -127,36 +109,74 @@ body{
 
 
 .welcome-note{
-  position: absolute;
-  top: calc(50% - 120px);
-  left: calc(50% - 50px);
-  margin: -10px -85px;
-  height: 150px;
-  width: 350px;
-  color:white;
-  padding: 10px;
-  z-index: 2;
+position: absolute;
+top: calc(50% - 75px);
+left: calc(50% - 300px);
+margin: 10px -15px;
+height: 150px;
+width: 350px;
+color: white;
+padding: 10px;
+z-index: 2;
 
 }
 
 .welcome-button{
-  position: absolute;
-  top: calc(50% - 120px);
-  left: calc(50% - 50px);
-  margin: 70px -60px;
-  width:250px;
-  color:gray;
-  z-index: 2;
+position: absolute;
+top: calc(50% - 0px);
+left: calc(50% - 50px);
+margin: 0 -60px;
+width: 250px;
+color: gray;
+z-index: 2;
 }
 
 .welcome-init{
-  margin: -100px -300px;
+ margin: 0px 170px;
 }
 
 .login-init{
   margin: 100px 100px;
 }
 
+/* ==========================================================================
+   Miscellaneous
+   ========================================================================== */
+
+.register-text{
+  font-size:14px;
+  color:#FFFFFF;
+}
+.text-change-color-b{
+  color:#000000;
+}
+
+.register-white{
+  color:white;
+}
+
+.visibility-hidden{
+  visibility:hidden;
+}
+
+.welcome-text{
+  margin: -10px 90px
+}
+
+.to-text{
+  margin-left: 95px;
+}
 
 
-
+.B-text{
+  margin: -45px 135px;
+  font-size: 50px;
+}
+.M-text{
+  margin: 15px 150px;
+  font-size: 50px;
+}
+.S-text{
+  margin: -47px 177px;
+  font-size: 50px;
+}
