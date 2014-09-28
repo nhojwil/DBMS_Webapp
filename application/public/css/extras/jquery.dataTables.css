@@ -450,9 +450,13 @@ table.dataTable td {
   }
 
 
+  .dataTables_wrapper .dataTables_length{
+    float: left;
+  }
+
   .dataTables_wrapper .dataTables_filter{
     float:right;
-  }
+  } 
   .dataTables_wrapper .dataTables_filter {
     margin-top: 0.5em;
   }
