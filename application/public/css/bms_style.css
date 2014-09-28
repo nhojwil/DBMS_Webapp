@@ -1,3 +1,11 @@
+.body{
+
+	  background-image:url('../img/main/bms_background.jpg');
+}
+
+/* ==========================================================================
+   BMS Index
+   ========================================================================== */
 .intro-project{
 	position: absolute;
 	top: calc(50% - 75px);
@@ -9,7 +17,87 @@
 	padding: 10px;
 	z-index: 2;
 }
+.intro-project-table{
+	position: absolute;
+	top: calc(50% - 176px);
+	left: calc(50% - 300px);
+	margin: 10px -15px;
+	height: 150px;
+	width: auto;
+	color: white;
+	padding: 10px;
+	z-index: 2;
+}
 
+table {
+	background:rgba(0,0,0,0.8);
+	color:#FFFFFF;
+}
+
+.table-bordered{
+	border-color: #657383;	
+}
+td{
+	width:150px;
+	color:#FFFFFF;
+}
+td:nth-child(1){
+	width:75px;
+}
+
+th{
+	background:rgba(0,0,0,0.8);
+}
 .click-project{
 	margin: -44px 100px;
+}
+.btn > a{
+	color: #FFFFFF;
+}
+
+/* ==========================================================================
+   Create Page
+   ========================================================================== */
+
+ .create-project{
+	position: absolute;
+	top: calc(50% - 176px	);
+	left: calc(50% - 300px);
+	margin: 10px -15px;
+	height: 150px;
+	width: auto;
+	color: white;
+	padding: 10px;
+	z-index: 2;
+}
+
+.form-control {
+	background: transparent;
+	color:#FFFFFF;
+}
+
+.m-ddn{
+	margin: 0 10px;
+}
+
+.btn-create-back{
+	margin: 10px 0px -10px 140px ;
+	opacity: 0.6;
+}
+
+.btn-create-back > button > a{
+	color: #000000;
+	font-size: 18px;
+}
+
+.btn-back{
+	border-radius: 0px;
+}
+
+.opacity-6{
+	opacity: 0.6;
+}
+
+.opacity-6 > option{
+	opacity: 1;
 }

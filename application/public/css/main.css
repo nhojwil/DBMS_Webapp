@@ -67,6 +67,10 @@ a:hover {
   margin-right: 10px!important;
 }
 
+.m-b-5{
+  margin-bottom: 5px;
+}
+
 .p15 {
   padding: 15px;
 }
@@ -88,6 +92,12 @@ a:hover {
   position: relative; 
 }
 
+.btn-black{
+  background: rgba(0,0,0,0.8);
+}
+.btn-black:hover{
+ background: rgba(13,24,30,0.8);
+}
 .visibility-hidden{
   visibility:hidden;
 }

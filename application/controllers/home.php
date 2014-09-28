@@ -36,7 +36,9 @@ class Home extends BMS_Controller
 		if($this->form_validation->run()){
 			$a_user_account = $this->admin_model->login();
 			if($a_user_account != FALSE){
-				$a_data = array('CategoryID' => $a_user_account->CategoryID);
+				$a_data = array('CategoryID' => $a_user_account->CategoryID, 
+								'AccNo' => $a_user_account->AccNo
+								);
 				$this->session->set_userdata($a_data);
 				$o_user_info = $this->member_model->get_info($a_user_account->MemberID);
 				$this->data['o_user'] = $o_user_info;
