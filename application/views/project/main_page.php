@@ -5,7 +5,7 @@
   ?>
 
       <div class="intro-project-table" id="phrase"> 
-        <button class="btn  btn-black btn-sm m-b-5"><a href="<?=base_url()?>bms/create">Create New Project</a></button><br>
+        <button class="btn btn-black btn-sm m-b-5"><a href="<?=base_url()?>bms/create">Create New Project</a></button><br>
         <table class = "  " id="keywords" cellspacing="0" cellpadding="0">
           <thead>
             <tr>
@@ -66,9 +66,6 @@
                                                 });
                         $(this).dequeue();
                       });
-
-            $(function(){
               $('#keywords').tablesorter(); 
-            });
       });
     </script>

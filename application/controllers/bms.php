@@ -19,6 +19,7 @@ class BMS extends BMS_Controller
 			base_url() . 'application/public/js/jquery-2.1.1.min.js',
 			base_url() . 'application/public/js/vendor/bootstrap.js',
 			base_url() . 'application/public/js/jquery.lettering.js',
+			base_url() . 'application/public/js/jquery.tablesorter.min.js',
 			);
 		$this->load->library('form_validation');
 		$this->load->helper('form');
@@ -65,6 +66,7 @@ class BMS extends BMS_Controller
 						$a_project_insert_db[$value] = $this->input->post($key);
 					}
 				}
+				$this->project_model->add($a_project_insert_db);
 			}
 			$this->data['s_main_content'] = 'project/create_project';
 			$this->load->view('includes/template', $this->data);
