@@ -21,6 +21,7 @@ class BMS extends BMS_Controller
 			base_url() . 'application/public/js/jquery-2.1.1.min.js',
 			base_url() . 'application/public/js/vendor/bootstrap.js',
 			base_url() . 'application/public/js/extras/jquery.dataTables.js',
+			base_url() . 'application/public/js/extras/custom-slide-page.js',
 			);
 		$this->load->library('form_validation');
 		$this->load->helper('form');

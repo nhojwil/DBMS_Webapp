@@ -112,13 +112,17 @@
 position: absolute;
 top: calc(50% - 75px);
 left: calc(50% - 300px);
-margin: 10px -15px;
+margin: 10px -37px;
 height: 150px;
 width: auto;
 color: white;
 padding: 10px;
 z-index: 2;
 
+}
+
+.welcome-note-dynamic{
+  margin: 10px -15px;
 }
 
 .welcome-button{
@@ -176,11 +180,24 @@ z-index: 2;
   margin: -45px 135px;
   font-size: 50px;
 }
+.B-cont-text{
+  margin: 10px 283px 0px 0px;
+  font-size:14px;
+}
 .M-text{
   margin: 15px 150px;
   font-size: 50px;
 }
+.M-cont-text{
+  margin: 10px 225px 0px 0px;
+  font-size:14px;
+}
 .S-text{
-  margin: -47px 177px;
+  margin: -44px 177px;
   font-size: 50px;
 }
+.S-cont-text{
+  margin: 10px 200px 0px 0px;
+  font-size:14px;
+}
+

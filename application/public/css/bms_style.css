@@ -3,6 +3,10 @@
 	  background-image:url('../img/main/bms_background.jpg');
 }
 
+#body-background, #nav-container{
+  display:none;
+}
+
 /* ==========================================================================
    BMS Index
    ========================================================================== */
@@ -89,6 +93,10 @@ a {
 	margin: 0 10px;
 }
 
+.m-b-5{
+	margin-bottom: 5px;
+}
+
 .btn-create-back{
 	margin: 10px 0px -10px 140px ;
 	opacity: 0.6;
@@ -131,4 +139,19 @@ a {
 
 .dataTables_info .dataTables_paginate {
 	color: #FFFFFF;
+}
+
+#placeholder-color-w::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #E5D7D7
+}
+#placeholder-color-w:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #E5D7D7
+   opacity:  1;
+}
+#placeholder-color-w::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #E5D7D7
+   opacity:  1;
+}
+#placeholder-color-w:-ms-input-placeholder { /* Internet Explorer 10+ */
+   color:   #E5D7D7
 }

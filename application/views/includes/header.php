@@ -85,8 +85,8 @@
 	</head>
 	<body>
 
-	<div class = "body"></div>
-	<div class="page-wrap">
+	<div class = "body" id="body-background"></div>
+	<div class="page-wrap" id = "main-wrap">
 			<div class="header-container">
 
 			</div>
@@ -131,7 +131,7 @@
 						break;
 						case 'bms':
 			?>
-						<div class="nav-container">
+						<div class="nav-container" id ="w">
 						<!--
 						<div class="row">
 							<div class="col-sm-10">

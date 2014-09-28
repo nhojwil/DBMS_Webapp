@@ -5,9 +5,9 @@
       <div class="welcome-note col-md-6 col-sm-6 col-xs-6" id="phrase">
         <h2 class="welcome-text" id = "welcome-text"> Welcome</h2> 
         <h2 class="to-text"      id = "to-text">        to   </h2>
-        <h2 class="B-text"       id = "B-text">          B   </h2>
-        <h2 class="M-text"       id = "M-text">          M   </h2>
-        <h2 class="S-text"       id = "S-text">          S   </h2>      
+        <h2 class="B-text"       id = "B-text">          B  <p class="pull-right B-cont-text" id = "B-cont-text">udget</p></h2> 
+        <h2 class="M-text"       id = "M-text">          M  <p class="pull-right M-cont-text" id = "M-cont-text">ontioring</p></h2>
+        <h2 class="S-text"       id = "S-text">          S  <p class="pull-right S-cont-text" id = "S-cont-text">ystem</p></h2>      
       </div>
       <div class="login col-md-6 col-sm-6 col-xs-6" id = "login">
         <div class= "error-message">
@@ -42,6 +42,7 @@
     <script src="<?= base_url() . 'application/public/js/jquery-2.1.1.min.js'?>"></script>
     <script>
         $(document).ready(function() {
+
           $('#proceed_button').addClass("visibility-hidden").hide("slow",function() {});
           $('#login').addClass("visibility-hidden").hide("slow",function() {}); 
           $('#welcome-text').addClass("visibility-hidden").hide("slow",function() {});
@@ -74,7 +75,20 @@
                                                                                                                                 .queue(function() {
                                                                                                                                         $(this).removeClass("visibility-hidden");
                                                                                                                                         $(this).fadeIn(700,function() {});
-                                      
+                                                                                                                                        $('#B-cont-text').delay(900)
+                                                                                                                                                    .queue(function() {
+                                                            
+                                                                                                                                                    $(this).fadeOut(200,function(){});
+                                                                                                                                                    $('#M-cont-text').fadeOut(200,function(){});
+                                                                                                                                                    $('#S-cont-text').fadeOut(200,function(){});
+                                                                                                                                                    $('#phrase').delay(400)
+                                                                                                                                                                .queue(function() {
+
+                                                                                                                                                                  $(this).animate({'marginLeft' : '+=32px'});
+                                                                                                                                                                  $(this).dequeue();
+                                                                                                                                                                });
+                                                                                                                                                    $(this).dequeue();
+                                                                                                                                        });
                                                                                                                                         $(this).dequeue();
                                                                                                                                       });
                                       

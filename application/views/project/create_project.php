@@ -3,10 +3,10 @@
     <h2>Please Enter Project Information.</h2>
     <form action="<?php echo base_url() ?>bms/create" method="post"  enctype="multipart/form-data" class="form-horizontal" role="form" id = 'myFormId' >        
           
-      <input type="text" class = "form-control" placeholder="Name" name="txt_project_name" required><br>
-      <input type="text" class = "form-control" placeholder="Purpose" name="txt_project_purpose" required><br>
-      <textarea class = "form-control" placeholder="Description" name="txt_project_description" required></textarea> <br>
-      <div class="form-group m-ddn row">
+      <input type="text" class = "form-control m-b-5" placeholder="Name" name="txt_project_name" id = "placeholder-color-w" required><br>
+      <input type="text" class = "form-control m-b-5" placeholder="Purpose" name="txt_project_purpose" id = "placeholder-color-w" required><br>
+      <textarea class = "form-control m-b-5" placeholder="Description" name="txt_project_description" id = "placeholder-color-w" required></textarea> <br>
+      <div class="form-group m-ddn row m-b-5">
         <div class = "col-xs-6 ">
           <select name="ddn_category" class="dropdown btn btn-default opacity-6" tabindex="2">
             <option value="" disabled selected>Select a Category</option>
