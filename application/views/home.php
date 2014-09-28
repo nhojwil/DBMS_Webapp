@@ -1,7 +1,7 @@
 
 <div class="container row">
   <?php 
-    if(!isset($o_user)){ ?>
+    if(!isset($o_user) && $this->session->userdata('FirstName') == null){ ?>
       <div class="welcome-note col-md-6 col-sm-6 col-xs-6" id="phrase">
         <h2 class="welcome-text" id = "welcome-text"> Welcome</h2> 
         <h2 class="to-text"      id = "to-text">        to   </h2>
@@ -29,9 +29,11 @@
     <?php
     }else{
       echo '<div class="welcome-note welcome-init" id="phrase">
-            <h2>Welcome, '.$o_user->Mem_FirstName.'</h2>
+            <h2>Welcome, '.$this->session->userdata('FirstName').'</h2>
             </div>
-            <a class="btn btn-default btn-md welcome-button" href="'.base_url().'bms" id="proceed_button">Proceed</a>
+            <div>
+              <a class="btn btn-default btn-md welcome-button" href="'.base_url().'bms" id="proceed_button">Proceed</a>
+            </div>
             ';
     }
     ?>

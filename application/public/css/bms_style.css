@@ -17,9 +17,10 @@
 	padding: 10px;
 	z-index: 2;
 }
+
 .intro-project-table{
 	position: absolute;
-	top: calc(50% - 176px);
+	top: calc(35% - 176px);
 	left: calc(50% - 300px);
 	margin: 10px -15px;
 	height: 150px;
@@ -28,6 +29,13 @@
 	padding: 10px;
 	z-index: 2;
 }
+
+@media (max-width: 480px){
+	.btn-black{
+		margin-left:75px;
+	}
+}
+
 
 table {
 	background:rgba(0,0,0,0.8);
@@ -51,7 +59,8 @@ th{
 .click-project{
 	margin: -44px 100px;
 }
-.btn > a{
+
+a {
 	color: #FFFFFF;
 }
 
@@ -61,7 +70,7 @@ th{
 
  .create-project{
 	position: absolute;
-	top: calc(50% - 176px	);
+	top: calc(50% - 240px);
 	left: calc(50% - 300px);
 	margin: 10px -15px;
 	height: 150px;
@@ -100,4 +109,26 @@ th{
 
 .opacity-6 > option{
 	opacity: 1;
+}
+
+/* ==========================================================================
+   Data Tables
+   ========================================================================== */
+.dataTables_wrapper .dataTables_filter input[type=search]{
+	margin-left: -155px;
+	position: absolute;
+	width: 20%;
+	background: rgba(0,0,0,0.4);
+	border-color: transparent;
+}
+.dropdown-data-tables{
+	background: rgba(0,0,0,0.4);
+	border-color: rgba(0,0,0,0.4);
+}
+.span-left{
+	margin:4px 157px 0px -7px;
+}
+
+.dataTables_info .dataTables_paginate {
+	color: #FFFFFF;
 }

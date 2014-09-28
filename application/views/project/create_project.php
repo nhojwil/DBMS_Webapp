@@ -21,11 +21,11 @@
         </div>
       </div>
       <div class = "row btn-create-back">
-        <button type="button" class="btn btn-default btn-lg btn-back">
-          <a href = "<?=base_url();?>bms" class = "">
+        <a href = "<?=base_url();?>bms" class = "">
+          <button type="button" class="btn btn-default btn-lg btn-back">
              Back
-          </a>
-        </button>
+          </button>
+        </a>
         <input class = "btn btn-default btn-lg"type="submit" value="Create">   
       </div>
     </form>
@@ -47,5 +47,12 @@
                                                 });
                         $(this).dequeue();
                       });
+
+            var form = $("#myFormId");
+            var url = form.attr("action");
+            var formData = form.serialize();
+            $.post(url, formData, function (data) {
+                $("#msg").html(data);
+            });
       });
     </script>

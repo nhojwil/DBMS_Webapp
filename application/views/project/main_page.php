@@ -4,9 +4,9 @@
     if(isset($a_table_project_data) && $a_table_project_data != NULL){
   ?>
 
-      <div class="intro-project-table" id="phrase"> 
-        <button class="btn btn-black btn-sm m-b-5"><a href="<?=base_url()?>bms/create">Create New Project</a></button><br>
-        <table class = "  " id="keywords" cellspacing="0" cellpadding="0">
+      <div class="intro-project-table pagination" id="phrase"> 
+        <a href="<?=base_url()?>bms/create"><button class="btn btn-black btn-sm m-b-5">Create New Project</button></a><br>
+        <table class = "dataTable  " id="keywords" cellspacing="0" cellpadding="0">
           <thead>
             <tr>
               <th>ID</th>
@@ -30,7 +30,6 @@
             ?>
           </tbody>
         </table>
-      </div>
 
   <?php
     }else{
@@ -46,6 +45,7 @@
 </div>
 
  <script src="<?= base_url() . 'application/public/js/jquery-2.1.1.min.js'?>"></script>
+ <script src="<?= base_url() . 'application/public/js/extras/jquery.dataTables.js'?>"></script>
     <script>
         $(document).ready(function() {
            $('#click-project').addClass("visibility-hidden").hide("slow",function() {});
@@ -66,6 +66,24 @@
                                                 });
                         $(this).dequeue();
                       });
-              $('#keywords').tablesorter(); 
-      });
+            $('#keywords').dataTable({
+              "pageLength": 5,
+              "language": {
+                 "search": "<span class='glyphicon glyphicon-search span-left'></span>",
+                 "sSearchPlaceholder":" Search",
+                 "lengthMenu": 'Display <select class ="btn-sm dropdown-data-tables">'+
+                   '<option value="5">5</option>'+
+                   '<option value="10">10</option>'+
+                   '<option value="15">15</option>'+
+                   '<option value="20">20</option>'+
+                   '<option value="-1">All</option>'+
+                   '</select> records'
+
+               }
+            
+            });
+
+
+
+});
     </script>

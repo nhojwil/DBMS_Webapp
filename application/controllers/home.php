@@ -34,13 +34,15 @@ class Home extends BMS_Controller
 		$this->form_validation->set_rules('txt_password', 'Member_Pword', 'trim|required|xss_clean|min_length[4]');
 		
 		if($this->form_validation->run()){
-			$a_user_account = $this->admin_model->login();
-			if($a_user_account != FALSE){
-				$a_data = array('CategoryID' => $a_user_account->CategoryID, 
-								'AccNo' => $a_user_account->AccNo
+			$o_user_account = $this->admin_model->login();
+			if($o_user_account != FALSE){
+				$o_user_info = $this->member_model->get_info($o_user_account->MemberID);
+				$a_data = array('CategoryID' => $o_user_account->CategoryID, 
+								'AccNo' => $o_user_account->AccNo,
+								'FirstName' => $o_user_info->Mem_FirstName,
+								'LastName' => $o_user_info->Mem_LastName
 								);
 				$this->session->set_userdata($a_data);
-				$o_user_info = $this->member_model->get_info($a_user_account->MemberID);
 				$this->data['o_user'] = $o_user_info;
 			}else{
 				$this->data['s_error'] = "Invalid Username/Password, Please try again";

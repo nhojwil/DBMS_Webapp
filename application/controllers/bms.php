@@ -8,18 +8,19 @@ class BMS extends BMS_Controller
 		
 		$this->data['s_page_title'] = 'Home';
 		$this->data['s_page_header'] = 'home';
-		$this->data['s_page_type'] = 'home';
+		$this->data['s_page_type'] = 'bms';
 		$this->data['a_cs_scripts'] = array(
+			base_url() . 'application/public/css/extras/jquery.dataTables.css',
 			base_url() . 'application/public/css/main.css',
 			base_url() . 'application/public/css/css-responsive-table.css',
 			base_url() . 'application/public/css/bms_style.css',	
+
 			);
 
 		$this->data['a_js_scripts'] = array( 
 			base_url() . 'application/public/js/jquery-2.1.1.min.js',
 			base_url() . 'application/public/js/vendor/bootstrap.js',
-			base_url() . 'application/public/js/jquery.lettering.js',
-			base_url() . 'application/public/js/jquery.tablesorter.min.js',
+			base_url() . 'application/public/js/extras/jquery.dataTables.js',
 			);
 		$this->load->library('form_validation');
 		$this->load->helper('form');
@@ -35,7 +36,7 @@ class BMS extends BMS_Controller
 			$this->data['a_table_project_data'] = $a_project_list ;
 			$s_main_content = 'project/main_page';
 		}else{
-			$s_main_content = 'error';
+			redirect('/', 'refresh');
 		}
 		$this->data['s_main_content'] = $s_main_content;
 		$this->load->view('includes/template', $this->data);
@@ -67,6 +68,7 @@ class BMS extends BMS_Controller
 					}
 				}
 				$this->project_model->add($a_project_insert_db);
+				redirect('/bms');
 			}
 			$this->data['s_main_content'] = 'project/create_project';
 			$this->load->view('includes/template', $this->data);

@@ -129,12 +129,13 @@
 			<?php		
 								}
 						break;
-						case 'nothome':
+						case 'bms':
 			?>
 						<div class="nav-container">
+						<!--
 						<div class="row">
 							<div class="col-sm-10">
-								<nav class="navbar navbar-default nav-bg-color shadow" role="navigation">
+								<nav class="navbar navbar-default navbar-transparent text-color-white" role="navigation">
 										<div class="navbar-header">
 											<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-main">
 												<span class="sr-only">Toggle navigation</span>
@@ -157,16 +158,41 @@
 										</div>
 								</nav>
 							</div>
-							<div class="col-sm-2 hidden-xs" style="margin-left: -20px;">
-								<nav class="navbar navbar-default nav-bg-color-2 shadow-dark" role="navigation">
-									<div class="">
-										<div class="navbar-header">
-											<a class="navbar-brand cs-font-delius centre-login" href="<?php echo base_url(); ?>register/">CENTRES LOG IN</a>
-										</div>
-									</div>
-								</nav>
+							-->
+							<div class="row hidden-sm hidden-xs m-log pull-right" style="margin-left: -20px;">
+								<div class="dropdown col-xs-3 pd-l-2 pd-r-2 m-top-15">
+  										<button class="btn btn-default btn-sm dropdown-toggle dropdown-transparent" type="button" id="dropdownMenu1" data-toggle="dropdown">
+    									<span class="caret"></span>
+  									</button>
+  									<ul class="dropdown-menu dropdown-menu-semi-transparent" role="menu" aria-labelledby="dropdownMenu1">
+   									 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Account Settings</a></li>
+    									<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Account Settings</a></li>
+    									<li role="presentation" class="divider"></li>
+    									<li role="presentation"><a role="menuitem" tabindex="-1" href="<?=base_url()?>log/logout">Log out</a></li>
+  									</ul>
+								</div>
+								<div class=" col-xs-9 navbar-header navbar-brand pd-l-2">
+									Hi, <?php if($this->session->userdata('FirstName')!= null){ echo $this->session->userdata('FirstName');}?>
+								</div>
 							</div>
-						</div>
+
+							<div class="row visible-sm visible-xs pull-left m-left-20" style = "margin-left:20px;">
+									<div class=" col-xs-6 navbar-header navbar-brand">
+										Hi, <?php if($this->session->userdata('FirstName')!= null){ echo $this->session->userdata('FirstName');}?>
+									</div>
+									<div class="dropdown col-xs-6 pd-l-2 pd-r-2 m-top-15">
+  									<button class="btn btn-default btn-sm dropdown-toggle dropdown-transparent" type="button" id="dropdownMenu1" data-toggle="dropdown">
+    									<span class="caret"></span>
+  									</button>
+  									<ul class="dropdown-menu dropdown-menu-semi-transparent" role="menu" aria-labelledby="dropdownMenu1">
+   									 	<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Account Settings</a></li>
+    									<li role="presentation" class="divider"></li>
+    									<li role="presentation"><a role="menuitem" tabindex="-1" href="<?=base_url()?>log/logout">Log out</a></li>
+  									</ul>
+								</div>
+			
+							</div>
+						<!--</div>-->
 						</div>
 			<?php
 						break;
